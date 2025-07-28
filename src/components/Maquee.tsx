@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Marquee } from "./magicui/marquee"
 
 const companies = [
@@ -16,15 +17,17 @@ const companies = [
       <section className="w-full  py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center ">
-            <p className="text-gray-600 text-md font-thin">Trusted by the world's leading businesses</p>
+            <p className="text-gray-600 text-md font-thin">Trusted by the world&apos;s leading businesses</p>
           </div>
   
           <Marquee pauseOnHover className="[--duration:30s]">
             {companies.map((company, index) => (
               <div key={index} className="flex items-center justify-center px-8 py-4 mx-4">
-                <img
+                <Image
                   src={company.logo || "/placeholder.svg"}
                   alt={`${company.name} logo`}
+                  width={24}
+                  height={24}
                   className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity duration-200 grayscale hover:grayscale-0"
                 />
               </div>

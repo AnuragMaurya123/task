@@ -94,7 +94,7 @@ export default function Hero() {
           {/* CTA Button */}
           <div className="pt-8">
             <Button className="h-14 px-12 text-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-[20px] shadow-lg hover:shadow-xl transition-all duration-200">
-              Get Started. It's FREE
+              Get Started. It&apos;s FREE
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
