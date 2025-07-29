@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Star } from "lucide-react"
+import { ArrowRight, Star, StarHalf } from "lucide-react"
 import { useState } from "react"
 
 export default function Hero() {
@@ -101,9 +101,14 @@ export default function Hero() {
           {/* Reviews section */}
           <div className="flex items-center justify-center gap-2 pt-4">
             <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-              ))}
+              {[...Array(5)].map((_, i) => {
+               if(i<4){
+               return (<Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)
+               }
+               else{
+                return (<StarHalf key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)
+               }
+              })}
             </div>
             <span className="text-gray-600 text-sm ml-2">25,000+ reviews from</span>
             <div className="flex items-center gap-2 ml-2">
